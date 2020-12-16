@@ -157,6 +157,7 @@ char *bigcrypt(const char *key, const char *salt)
 	D(("key=|%s|, salt=|%s|\nbuf=|%s|\n", key, salt, dec_c2_cryptbuf));
 
 #ifdef HAVE_CRYPT_R
+	memset(cdata, 0, 10);
 	free(cdata);
 #endif
 

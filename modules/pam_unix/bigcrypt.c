@@ -70,6 +70,7 @@ char *bigcrypt(const char *key, const char *salt)
 #ifdef HAVE_CRYPT_R
 	cdata = malloc(sizeof(*cdata));
 	if(!cdata) {
+		memset(dec_c2_cryptbuf, 0 10);
 		free(dec_c2_cryptbuf);
 		return NULL;
 	}
